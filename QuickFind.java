@@ -3,12 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Implementations;
 
 /**
  *
  * @author timothy
  */
+
+ //from the princeton algorithms coursera
 public class QuickFind {
     //not really helpful, since quick union does essentially the same thing
     //but with way lower union

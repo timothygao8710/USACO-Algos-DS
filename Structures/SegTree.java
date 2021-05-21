@@ -1,3 +1,5 @@
+package Structures;
+
 
 /**
  * -Take it slow, think-
@@ -19,7 +21,7 @@ public class SegTree {
 
     public SegTree(long[] nums) {
         //https://codeforces.com/blog/entry/49939 - 2n non-null nodes, worst case 4n-1(4n with 1 index) total nodes
-        //2n to go to next level(worst case could branch at right)
+        //2n to go to next level(worst case could branch at rightmost node, but because of how we define branching it could never go right->right child)
         //2(2n) - 1 to count all nodes of that level
         nodes = new long[4 * nums.length];
         lazy = new long[4 * nums.length];

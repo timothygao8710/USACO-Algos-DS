@@ -8,7 +8,11 @@ class BIT { //AKA BIT
     public BIT(long[] nums) {
         bit = new long[nums.length + 1]; //one-indexed
         for (int i = 1; i <= nums.length; i++) {
-            bit[i + i & -i] += nums[i - 1];
+            bit[i] += nums[i - 1]; //update node
+            if (i + (i & -i) <= nums.length) {
+                bit[i + (i & -i)] += bit[i]; //update parent
+            }
+
         }
     }
 
